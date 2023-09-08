@@ -1,0 +1,262 @@
+.q-btn:not(.q-btn--round) {
+  line-height: 1.4;
+  font-size: 1.4rem;
+  font-weight: 400;
+  min-height: 3.2rem;
+  .q-icon {
+    font-size: 2rem;
+  }
+  &.ant-btn-sm {
+    min-height: initial;
+    min-width: 5rem;
+  }
+}
+
+.q-table {
+  th {
+    font-weight: 700;
+    color: $blue-grey;
+  }
+  td {
+    border-color: #f0f0f0;
+  }
+  &__title {
+    font-size: 1.4rem;
+    letter-spacing: 0;
+  }
+}
+
+.q-table--bordered {
+  border-color: #f0f0f0;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.ant-modal-title {
+  display: flex;
+  align-items: center;
+  .title {
+    vertical-align: middle;
+  }
+  .q-btn--round {
+    min-width: 2rem;
+    min-height: 2rem;
+  }
+}
+
+.q-btn--rectangle {
+  border-radius: 0.2rem;
+}
+
+.q-table {
+  .ant-typography-ellipsis {
+    margin: 0;
+    width: 100%;
+    max-width: 20rem;
+  }
+  .q-btn {
+    font-size: 1.3rem;
+  }
+  a.ant-typography {
+    &:hover {
+      u {
+        text-decoration: none;
+      }
+    }
+  }
+  .ant-btn {
+    box-shadow: none;
+  }
+}
+
+// .ant-btn {
+//   &-success {
+//     background-color: $teal;
+//     color: #fff;
+//     &:active,
+//     &:hover,
+//     &:focus {
+//       color: $teal;
+//       border-color: $teal;
+//     }
+//   }
+// }
+
+.ant-btn-sm {
+  font-size: 1.2rem;
+  line-height: 1;
+}
+
+.ant-picker {
+  &.readonly {
+    padding: 0;
+    border: 0;
+    background: transparent;
+    .ant-picker-suffix {
+      display: none;
+    }
+    .ant-picker-input > input[disabled] {
+      color: #333;
+      opacity: 1 !important;
+    }
+  }
+}
+
+.ant-input-group.ant-input-group-compact {
+  display: flex;
+
+  .ant-btn {
+    min-width: 8rem;
+  }
+  .anticon-check {
+    color: $light-green-9;
+  }
+}
+
+.ant-input-number {
+  &.text-right {
+    .ant-input-number-handler-wrap {
+      display: none;
+    }
+    &.ant-input-number-focused {
+      // input {
+      //   padding-right: 3rem;
+      // }
+    }
+    input {
+      text-align: right;
+    }
+  }
+}
+
+// anticon anticon-check success
+
+.text-subtitle1 {
+  font-size: 1.2rem;
+}
+
+.user-tooltip {
+  .ant-tooltip-content {
+  }
+  .ant-tooltip-arrow-content {
+    background-color: #fff;
+  }
+  .ant-tooltip-inner {
+    background-color: #fff;
+    padding: 1rem 2rem;
+  }
+  .menu {
+    margin: 0;
+    padding: 0;
+    li {
+      padding-top: 0.2rem;
+      padding-bottom: 0.2rem;
+    }
+  }
+  .ant-typography {
+    &:not(.ant-typography-disabled):hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.tree-table {
+  .ant-table-cell {
+    padding: 0.5rem 1rem;
+  }
+}
+
+.status-daily {
+  ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    li {
+      // overflow: hidden;
+      // white-space: nowrap;
+      // -ms-text-overflow: ellipsis;
+      // -o-text-overflow: ellipsis;
+      // text-overflow: ellipsis;
+    }
+  }
+  .vue3-extend-calendar-title {
+    .date {
+      font-weight: 400 !important;
+    }
+  }
+  .arrow {
+    width: 0.85rem !important;
+  }
+  .status-li {
+    text-overflow: ellipsis;
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 13px;
+    .key {
+      font-weight: 500;
+    }
+  }
+  .vue3-extend-calendar-tbody-content-wrap {
+    padding: 0 0.5rem;
+  }
+  &.main {
+    .vue3-extend-calendar {
+      td {
+        vertical-align: top;
+      }
+    }
+    .vue3-extend-calendar-tbody-date {
+      line-height: 1.4;
+      min-height: 2rem;
+    }
+    .vue3-extend-calendar-tbody-content-wrap {
+      min-height: initial;
+      max-height: initial;
+      padding-bottom: 0.5rem;
+    }
+    .vue3-extend-calendar-tbody-inner-wrap {
+      cursor: default;
+      &:hover {
+        background-color: transparent;
+      }
+      &.today {
+        background-color: transparent;
+      }
+    }
+    .status-text {
+      font-size: 1.2rem;
+      font-weight: 400;
+      color: $grey-8;
+      line-height: 1.2;
+      .value {
+        font-weight: 500;
+        color: $grey-10;
+      }
+    }
+  }
+}
+
+.daily-details {
+  width: 90% !important;
+  .ant-modal-body {
+    padding: 0;
+  }
+  .ant-modal-header {
+    border-bottom: none;
+    padding: 1.6rem 2.4rem 0.6rem 2.4rem;
+  }
+  .ant-tabs-nav {
+    padding: 0 2.4rem;
+    margin-bottom: 0;
+  }
+  .ant-table-cell {
+    font-size: 1.3rem;
+  }
+  .ant-tabs-tab {
+    font-size: 1.3rem;
+  }
+}
+@media (min-width: 992px) {
+}

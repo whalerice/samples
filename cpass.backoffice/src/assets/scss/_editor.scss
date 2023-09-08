@@ -1,0 +1,346 @@
+@import url(r2-summernote/dist/summernote.min.css);
+
+.note-editor {
+  color: #000;
+  border-radius: $radius;
+
+  // init
+  .btn-group {
+    margin: initial;
+    justify-content: initial;
+    width: initial;
+    display: inline-flex;
+    align-items: center;
+  }
+
+  .tooltip {
+    position: absolute;
+    z-index: 1070;
+    display: block;
+    margin: 0;
+    font-family: inherit;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.5;
+    text-align: left;
+    text-align: start;
+    text-decoration: none;
+    text-shadow: none;
+    text-transform: none;
+    letter-spacing: normal;
+    word-break: normal;
+    word-spacing: normal;
+    white-space: normal;
+    line-break: auto;
+    font-size: 0.875rem;
+    word-wrap: break-word;
+    opacity: 0;
+    .arrow {
+      position: absolute;
+      display: block;
+      width: 0.8rem;
+      height: 0.4rem;
+      &:before {
+        position: absolute;
+        content: '';
+        border-color: transparent;
+        border-style: solid;
+      }
+    }
+    &.show {
+      opacity: 0.9;
+    }
+  }
+
+  .bs-tooltip-bottom,
+  .bs-tooltip-auto[x-placement^='bottom'] {
+    padding: 0.4rem 0;
+  }
+
+  .bs-tooltip-bottom .arrow,
+  .bs-tooltip-auto[x-placement^='bottom'] .arrow {
+    top: 0;
+  }
+
+  .bs-tooltip-bottom .arrow::before,
+  .bs-tooltip-auto[x-placement^='bottom'] .arrow::before {
+    bottom: 0;
+    border-width: 0 0.4rem 0.4rem;
+    border-bottom-color: #000;
+  }
+
+  .tooltip-inner {
+    max-width: 200px;
+    padding: 0.25rem 0.5rem;
+    color: #fff;
+    text-align: center;
+    background-color: #000;
+    border-radius: 0.25rem;
+  }
+
+  .popover {
+    position: absolute;
+    top: 0;
+    text-align: left;
+    background-color: #fff;
+    border-radius: $radius;
+    border: 0.1rem solid rgba(0, 0, 0, 0.2);
+    .arrow {
+      width: 1rem;
+      height: 1rem;
+      position: absolute;
+
+      &:after {
+        content: '';
+        position: absolute;
+        display: block;
+        width: 0;
+        height: 0;
+      }
+    }
+    &.bottom {
+      margin-top: 0.8rem;
+      .arrow {
+        top: -1rem;
+        border-bottom: 1rem solid rgba(0, 0, 0, 0.25);
+        border-left: 0.7rem solid transparent;
+        border-right: 0.7rem solid transparent;
+        &:after {
+          top: 0.2rem;
+          left: -0.7rem;
+          border-bottom: 0.9rem solid #fff;
+          border-left: 0.7rem solid transparent;
+          border-right: 0.7rem solid transparent;
+        }
+      }
+    }
+  }
+  .note-popover {
+    .popover-content {
+      padding: 0.4rem;
+      > span {
+        padding-left: 1rem;
+        padding-right: 1rem;
+      }
+      > .note-btn-group {
+        margin: 0.3rem;
+      }
+    }
+  }
+
+  .note-btn {
+    color: #333;
+    background-color: #fff;
+    border: 0.1rem solid rgba(0, 0, 0, 0.15);
+    border-radius: 0.3rem;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    &.active {
+      box-shadow: inset 0 3px 5px rgb(0 0 0 / 13%);
+    }
+  }
+  .note-btn-group {
+    margin-right: 1rem;
+    > .note-btn {
+      &:not(:first-child):not(:last-child):not(.dropdown-toggle) {
+        border-radius: 0;
+        margin-left: -0.1rem;
+      }
+      &:last-child:not(.dropdown-toggle) {
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+        margin-left: -0.1rem;
+      }
+    }
+    > .note-btn-group {
+      border: 0;
+      margin-right: 0;
+    }
+    > .note-color {
+      .btn:not(.dropdown-toggle) {
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+      }
+      .dropdown-toggle {
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+      }
+      .btn + .dropdown-toggle {
+        margin-left: -0.1rem;
+      }
+    }
+  }
+
+  .note-modal {
+    background-color: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+    text-align: center;
+    &::before {
+      content: '';
+      display: inline-block;
+      vertical-align: middle;
+      width: 0.1rem;
+      height: 100%;
+    }
+
+    &.show {
+      z-index: 10;
+    }
+  }
+  .modal-dialog {
+    margin-left: -0.1rem;
+    text-align: left;
+    display: inline-block;
+    vertical-align: middle;
+    width: 98%;
+    max-width: 50rem;
+  }
+
+  .modal-content {
+    background-color: #fff;
+    border-radius: $radius;
+    width: 100%;
+    .modal-header {
+      position: relative;
+      padding: 1rem;
+
+      .close {
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        width: 3rem;
+        height: 3rem;
+        border: 0;
+        @include ico('xmark', 'rgb(85, 85, 85)');
+        background-size: 50% 50%;
+        font-size: 0;
+        cursor: pointer;
+      }
+      .modal-title {
+        font-size: 1.8rem;
+        font-weight: 700;
+        margin-bottom: 0;
+        margin-left: 0.5rem;
+      }
+    }
+    .modal-body {
+      padding: 1.5rem;
+      overflow-x: hidden !important;
+    }
+    .modal-footer {
+      text-align: right;
+      padding: 1rem;
+      p {
+        margin: 0;
+      }
+    }
+  }
+  .checkbox {
+    label {
+      input {
+        display: inline-block;
+        vertical-align: middle;
+      }
+    }
+  }
+  .note-form-group {
+    margin-bottom: 1.5rem;
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+    .note-form-label {
+      display: block;
+      font-size: 1.3rem;
+      margin-bottom: 0.5rem;
+    }
+    .note-form-control {
+      outline: none;
+      width: 100%;
+      border: 0.1rem solid $co-border;
+      border-radius: 0.6rem;
+      padding: 1rem;
+      // &:hover {
+      //   border-color: $co-line-active;
+      // }
+      // &:focus {
+      //   border-color: $co-line-active;
+      // }
+    }
+  }
+
+  .dropdown-menu {
+    @include uiInit;
+    display: none;
+
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1000;
+    display: none;
+    float: left;
+    min-width: 16rem;
+    padding: 0.5rem 0;
+    font-size: 1.4rem;
+    text-align: left;
+    list-style: none;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 0.1rem solid rgba(0, 0, 0, 0.15);
+    border-radius: 0.4rem;
+    box-shadow: 0 0.6rem 1.2rem rgba(0, 0, 0, 0.18);
+
+    li {
+      a {
+        display: block;
+        color: inherit;
+        padding: 0.5rem 1rem;
+        &:hover {
+          text-decoration: none;
+          background-color: #eee;
+        }
+      }
+    }
+    &.show {
+      display: block;
+      z-index: 10;
+    }
+  }
+
+  .note-icon-menu-check {
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  .note-placeholder {
+    font-size: 14px;
+    line-height: 1.4;
+  }
+
+  .note-toolbar {
+    padding: 0.5rem;
+    border-bottom: 0.1rem solid rgba(0, 0, 0, 0.15);
+    background-color: #fff;
+    border-radius: $radius $radius 0 0;
+
+    > .note-btn-group {
+      margin: 0.3rem;
+    }
+  }
+
+  .note-status-output {
+    padding-top: 0;
+  }
+  &.note-frame.codeview .note-editing-area .note-codable {
+    font-family: 'Consolas', sans-serif;
+  }
+}
+
+// summernote editer init
+.note-editable {
+  @include uiInit;
+}

@@ -1,0 +1,81 @@
+.sign-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 100vh;
+  background-color: $bg-dark-base;
+  color: #fff;
+}
+.sign-area {
+  width: 100%;
+  padding: 15px 30px;
+  max-width: 34rem;
+  text-align: center;
+  .cpass-logo {
+    font-size: 0;
+    display: inline-block;
+    width: 15rem;
+    height: 15rem;
+    background: url('~@/assets/images/cpass_logo.svg') 50% 50% no-repeat;
+    background-size: contain;
+    margin-left: -3rem;
+  }
+}
+
+.sign-box {
+  text-align: left;
+  margin-top: 2rem;
+  .remember {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    > label {
+      margin-left: 1rem;
+    }
+  }
+  .ant-btn-primary {
+    width: 100%;
+  }
+  a.ant-typography {
+    display: inline-block;
+    margin-top: 0.8rem;
+  }
+  .bottom-box {
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    .translate-dropdown-link {
+      float: right;
+    }
+    .disabled-password-find {
+      color: #ffffff5e;
+      pointer-events: none;
+    }
+    @include clearfix;
+  }
+}
+
+@media (min-width: 768px) {
+  .sign-area {
+    padding: 0;
+    .cpass-logo {
+      width: 24rem;
+      height: 24rem;
+    }
+  }
+}
+
+@media (min-width: 992px) {
+  .sign-area {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: initial;
+  }
+  .sign-box {
+    margin-top: 0;
+    width: 34rem;
+    margin-left: 5rem;
+  }
+}

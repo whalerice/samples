@@ -1,0 +1,60 @@
+html {
+  -ms-content-zooming: none;
+  -ms-touch-action: pan-x pan-y;
+  touch-action: pan-y;
+}
+
+html,
+body {
+  // font-family: 'Roboto', 'Spoqa Han Sans Neo', sans-serif;
+  font-size: 10px; // 1rem = 10px
+  line-height: 1.2;
+  background-color: $bg-base;
+  color: $co-base;
+}
+:lang(en) {
+  font-family: 'Roboto', sans-serif;
+}
+:lang(ko) {
+  font-family: 'Roboto', 'Spoqa Han Sans Neo', sans-serif;
+}
+:lang(zh) {
+  font-family: 'Roboto', 'Noto Sans TC', Tahoma, Helvetica, Arial, 'Microsoft Yahei', '微软雅黑', STXihei, '华文细黑',
+    sans-serif;
+}
+:lang(jp) {
+  font-family: 'Roboto', 'Noto Sans JP', Tahoma, Helvetica, Arial, sans-serif;
+}
+
+body {
+  font-size: 1.4rem;
+  color: $co-base;
+  overflow-x: hidden;
+}
+
+input,
+button,
+textarea {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: 1;
+  color: inherit;
+}
+
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+a {
+  color: inherit;
+  &:hover {
+    color: $co-primary;
+  }
+}
+
+// font-family: 'Noto Sans', sans-serif;
+// font-family: 'Noto Sans KR', sans-serif;
+// font-family: 'Noto Sans TC', sans-serif;

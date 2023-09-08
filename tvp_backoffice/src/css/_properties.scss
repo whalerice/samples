@@ -1,0 +1,127 @@
+// .t-02 {
+//   transition: 0.2s;
+// }
+
+// .q-fab-action-hide {
+//   opacity: 0;
+//   visibility: hidden;
+//   pointer-events: none;
+// }
+
+// .material-icons {
+//   nav-index: -1 !important;
+// }
+
+// .prediction-text {
+//   @each $key, $value in $prediction-colors {
+//     &-#{$key} {
+//       color: $value;
+//     }
+//   }
+// }
+
+// .text {
+//   &-left {
+//     text-align: left !important;
+//   }
+
+//   &-right {
+//     input {
+//       text-align: right;
+//     }
+//   }
+
+//   @each $key, $value in $custom-colors {
+//     &-custom-#{$key} {
+//       color: $value;
+//     }
+//   }
+
+//   @each $key, $value in $prediction-colors {
+//     &-prediction-#{$key} {
+//       color: $value;
+//     }
+//   }
+// }
+
+// .flex-1 {
+//   flex: 1;
+// }
+
+// .body--dark {
+//   .default-bg {
+//     background-color: $dark-component-bg;
+//   }
+
+//   .bg-prediction {
+//     background-color: #32394a;
+
+//     @each $key, $value in $prediction-colors {
+//       &-#{$key} {
+//         background-color: $value;
+//       }
+//     }
+//   }
+// }
+
+// $space-base: 1rem;
+// $space-xs: $space-base * 0.25;
+// $space-sm: $space-base * 0.5;
+// $space-md: $space-base;
+// $space-lg: $space-base * 1.5;
+// $space-xl: $space-base * 3;
+// $spaces: (
+//   'xs': $space-xs,
+//   'sm': $space-sm,
+//   'md': $space-md,
+//   'lg': $space-lg,
+//   'xl': $space-xl,
+// );
+
+// .spacing-x {
+//   > *:not(:first-child) {
+//     margin-left: $space-md;
+//   }
+// }
+
+// .spacing-y {
+//   > *:not(:first-child) {
+//     margin-top: $space-md;
+//   }
+// }
+
+// .spacing-x {
+//   @each $key, $value in $spaces {
+//     &-#{$key} {
+//       &:not(.reverse) {
+//         > *:not(:first-child) {
+//           margin-left: $value;
+//         }
+//       }
+
+//       &.reverse {
+//         > *:not(:first-child) {
+//           margin-right: $value;
+//         }
+//       }
+//     }
+//   }
+// }
+
+// .spacing-y {
+//   @each $key, $value in $spaces {
+//     &-#{$key} {
+//       &:not(.reverse) {
+//         > *:not(:first-child) {
+//           margin-top: $value;
+//         }
+//       }
+
+//       &.reverse {
+//         > *:not(:first-child) {
+//           margin-bottom: $value;
+//         }
+//       }
+//     }
+//   }
+// }

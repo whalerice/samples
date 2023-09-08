@@ -1,0 +1,68 @@
+// Quasar SCSS (& Sass) Variables
+// --------------------------------------------------
+// To customize the look and feel of this app, you can override
+// the Sass/SCSS variables found in Quasar's source Sass/SCSS files.
+
+// Check documentation for full list of Quasar variables
+
+// Your own variables (that are declared here) and Quasar's own
+// ones will be available out of the box in your .vue/.scss/.sass files
+
+// It's highly recommended to change the default colors
+// to match your app's branding.
+// Tip: Use the "Theme Builder" on Quasar's documentation website.
+
+// quasar default color
+$primary: #1890ff;
+$secondary: #26a69a;
+$accent: #9c27b0;
+
+// $dark: #191919;
+// $dark-page: #191919;
+
+$positive: #21ba45;
+$negative: #c10015;
+$info: #31ccec;
+$warning: #f2c037;
+
+// custom color
+$light-layout: #001529;
+$dark-page: #16191c;
+$dark-layout: #001529;
+$dark-layout-content: #16191c;
+$dark-component-bg: #202430;
+$dark-component-border: rgb(140 137 180 / 30%);
+
+$custom-white-01: #f2f2f2;
+$custom-dark-01: #353941;
+$custom-dark-02: #494949;
+$custom-dark-03: #1f1f1f;
+$custom-dark-04: #191c22;
+$custom-grey-01: #dfdfdf;
+$custom-blue-01: #40a9ff;
+$custom-blue-02: #dfdff1;
+
+$prediction-up: #00c476;
+$prediction-down: #f73c55;
+$prediction-odd: #4062ff;
+$prediction-even: #dbb326;
+$prediction-big: #b651ec;
+$prediction-small: #ff479f;
+$prediction-disable: #545766;
+
+$prediction-colors: (
+  'up': $prediction-up,
+  'down': $prediction-down,
+  'odd': $prediction-odd,
+  'even': $prediction-even,
+  'big': $prediction-big,
+  'small': $prediction-small,
+  'track': rgba(#1f222a, 0.5),
+  'input': #16191c,
+  'disable': $prediction-disable,
+);
+
+$custom-colors: (
+  'grey-01': $custom-grey-01,
+  'dark-01': $custom-dark-01,
+);

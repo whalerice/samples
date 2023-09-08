@@ -1,0 +1,255 @@
+.ant-layout-header {
+  display: flex;
+  align-items: center;
+  padding: 0 1rem 0 0;
+  height: 5rem;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 90;
+  .ant-tabs-tab + .ant-tabs-tab {
+    margin-left: 1rem;
+  }
+  .ant-tabs {
+    width: 100%;
+    margin-left: 1rem;
+    > .ant-tabs-nav {
+      margin-bottom: 0;
+      &::before {
+        display: none;
+      }
+      .ant-tabs-ink-bar {
+        display: none;
+      }
+    }
+  }
+  .ant-tabs-tab {
+    .ant-tabs-tab-btn {
+      color: #fff;
+      border-color: $primary;
+      background: $primary;
+      text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.12);
+      box-shadow: 0 2px 0 rgba(0, 0, 0, 0.045);
+
+      padding: 0.4rem 1.2rem;
+      border-radius: 0.2rem;
+    }
+    &.ant-tabs-tab-active {
+      color: #fff;
+    }
+  }
+
+  .ant-tabs-tab {
+    padding: 0;
+  }
+
+  .btn-logout {
+    width: 4rem;
+    height: 4rem;
+    margin-left: auto;
+    flex-shrink: 0;
+    border: 0;
+  }
+  .ant-tabs-nav-more {
+    color: #fff;
+    font-size: 1.8rem;
+  }
+}
+
+.ant-page-header {
+  box-sizing: border-box;
+  padding: 0 0 0 1.5rem;
+  background-color: #fff;
+  position: sticky;
+  top: 5rem;
+  width: 100%;
+  z-index: 90;
+  min-height: 4rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  .ant-page-header-heading-left {
+    margin: 0;
+  }
+  .ant-page-header-heading {
+    position: relative;
+  }
+  .ant-page-header-heading-title {
+    font-size: 1.6rem;
+    // line-height: 1;
+    .anticon {
+      display: inline-flex;
+      align-items: center;
+      margin-right: 0.5rem;
+    }
+  }
+  .ant-page-header-heading-extra {
+    margin: 0;
+  }
+}
+
+.ant-layout-sider {
+  overflow: auto;
+  height: 100vh;
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  bottom: 0;
+}
+
+// nav
+.ant-layout-sider {
+  .ant-menu {
+    margin-top: -0.4rem;
+  }
+  .ant-menu-item {
+    margin-top: 0.4rem;
+    .ant-menu-title-content {
+      display: flex;
+      align-items: center;
+    }
+    .anticon {
+      flex-shrink: 0;
+      // font-size: 1.6rem;
+    }
+    a {
+      display: block;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      word-break: break-word;
+      white-space: normal;
+      line-height: 1.2;
+
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+    }
+    &:not(:last-child) {
+      margin-bottom: 0.4rem;
+    }
+  }
+
+  .logo {
+    height: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .symbol {
+      margin-right: 0.5rem;
+      transform: translateY(-0.2rem);
+    }
+    > a {
+      display: block;
+      transition: 0.3s ease;
+    }
+    transform: translateX(-1rem);
+  }
+
+  &.ant-layout-sider-collapsed {
+    .logo {
+      .symbol {
+        margin-right: 0;
+      }
+      .q-icon {
+        &:nth-child(2) {
+          display: none;
+        }
+      }
+      transform: translateX(0);
+    }
+  }
+}
+
+.sider-backdrop {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 9;
+  display: none;
+}
+
+.custom-layout {
+  transition: 0.2s ease;
+  margin-left: 8rem;
+  height: 100%;
+
+  &.slide {
+    margin-left: 25rem;
+  }
+}
+
+.ant-layout-content {
+  padding: 1.5rem;
+}
+
+.ant-card {
+  .ant-tabs-nav-wrap {
+    padding-left: 1.5rem;
+  }
+  &.gap-sm {
+    margin-bottom: 1.5rem;
+  }
+  &.gap-md {
+    margin-bottom: 2rem;
+  }
+  &.gap-xl {
+    margin-bottom: 4rem;
+  }
+}
+
+.ant-form {
+  .btn-group {
+    margin-bottom: 0;
+    text-align: right;
+    .ant-btn {
+      min-width: 8rem;
+    }
+  }
+}
+
+.ant-modal-body {
+  .ant-table.ant-table-small .ant-table-thead > tr > th,
+  .ant-table.ant-table-small .ant-table-tbody > tr > td {
+    padding: 8px 16px;
+  }
+  .ant-pagination {
+    padding-right: 1.5rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .ant-layout-header {
+    padding-left: 1rem;
+  }
+  .ant-layout-sider {
+    transform: translateX(-100%);
+    &.show {
+      transform: translateX(0);
+    }
+  }
+
+  .sider-backdrop {
+    display: block;
+  }
+
+  .custom-layout {
+    margin-left: 0;
+    &.slide {
+      margin-left: 0;
+    }
+  }
+}
+
+@media (max-width: 575px) {
+  .ant-page-header {
+    padding-right: 0.5rem;
+    .theme-switch {
+      visibility: hidden;
+    }
+    .btn-lang {
+      display: none;
+    }
+  }
+}

@@ -1,0 +1,36 @@
+.body--light {
+  background-color: #f2f2f2;
+  .ant-layout-header,
+  .ant-layout-sider,
+  .ant-menu {
+    background-color: $light-layout;
+    color: inherit;
+  }
+
+  .custom-single-select {
+    color: #000000d9;
+
+    &.ant-select-open {
+      color: $custom-blue-01;
+    }
+    &:hover {
+      color: $custom-blue-01;
+    }
+
+    .ant-select-selection-item {
+      color: inherit !important;
+    }
+
+    .ant-select-arrow {
+      color: inherit;
+    }
+  }
+
+  .linkable-text {
+    color: rgba(0, 0, 0, 0.45);
+  }
+  input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 1000px #fff inset;
+    border-radius: 0;
+  }
+}

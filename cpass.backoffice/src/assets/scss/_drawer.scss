@@ -1,0 +1,58 @@
+.ant-drawer-wrapper-body {
+  background-color: #e9ecef;
+  .btn-group {
+    margin-bottom: 1.5rem;
+    text-align: right;
+  }
+}
+.ant-drawer-header {
+  padding: 4.8rem 3rem 3rem;
+  .ant-drawer-title {
+    .id {
+      display: block;
+      font-size: 2rem;
+      font-weight: 700;
+    }
+    .date {
+      display: block;
+      font-size: 1.4rem;
+    }
+  }
+  .ant-drawer-close {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    font-size: 2rem;
+    margin-right: 0;
+  }
+}
+
+.info-detail {
+  background-color: #fff;
+  padding: 2rem;
+  border: 0.1rem solid $co-border;
+  border-radius: $radius;
+  > .title {
+    margin-bottom: 2rem;
+  }
+  .info-box {
+    font-size: 1.2rem;
+    .label {
+      font-weight: 700;
+      color: #8392ab;
+      width: 10rem;
+      flex-shrink: 0;
+    }
+    .text {
+      color: #333;
+    }
+    .memo {
+      word-break: break-all;
+    }
+    .ant-col {
+      display: flex;
+      align-items: flex-start;
+      padding: 0.5rem 0;
+    }
+  }
+}

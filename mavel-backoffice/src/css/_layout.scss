@@ -1,0 +1,153 @@
+#q-app {
+  background-color: $bright-gray;
+}
+
+.q-drawer,
+.q-header {
+  background-color: $dark;
+  z-index: 99;
+}
+
+// .header-toolbar-inset {
+//   background-color: #fff;
+//   border-bottom: 0.1rem solid rgba(0, 0, 0, 0.1);
+// }
+
+.page-header {
+  line-height: 1.2;
+  padding: 0 1.5rem 0 0.7rem;
+  color: #fff;
+  .ant-page-header-heading {
+    min-height: 5rem;
+  }
+  .ant-page-header-heading-left {
+  }
+  .ant-page-header-heading-title {
+    display: flex;
+  }
+  .ant-page-header-heading-extra {
+    display: flex;
+    align-items: center;
+  }
+  .sidebar-toggle {
+    margin-right: 1rem;
+  }
+
+  &.inset {
+    min-height: 4.9rem;
+    padding: 0 1.5rem;
+    background-color: #fff;
+    border-bottom: 0.1rem solid rgba(0, 0, 0, 0.1);
+  }
+}
+
+.custom-container {
+  padding: 1.5rem;
+}
+
+.side-info-area {
+  margin: 0;
+  padding: 0;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+.side-info-item {
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 1.5rem;
+  .unit {
+    padding-left: 0.5rem;
+  }
+}
+
+.sidebar-area {
+  display: flex;
+  flex-flow: column;
+  background-color: $dark;
+  overflow-x: hidden;
+  .q-scrollarea {
+    width: 100%;
+    height: 100%;
+  }
+
+  .ant-divider {
+    background-color: rgba(255, 255, 255, 0.2);
+    margin: 0;
+  }
+  .sidebar-header {
+    width: 100%;
+    height: 5rem;
+    flex-shrink: 0;
+    background-color: $dark;
+  }
+  .logo {
+    display: block;
+    width: 100%;
+    height: 4rem;
+    background: url('/img/logo.svg') 0 50% no-repeat;
+    background-size: auto 100%;
+    font-size: 0;
+    transform: translateX(2.5rem);
+    transition: all 0.25s linear;
+    &.mini {
+      width: 4.7rem;
+      transform: translateX(0);
+    }
+  }
+  .ant-menu-item {
+    a {
+      color: #fff;
+    }
+    &.hide {
+      display: none;
+    }
+  }
+}
+
+.search-area {
+  margin-bottom: 1.5rem;
+  .ant-select {
+    min-width: 15rem;
+  }
+  .ant-input-group-compact {
+    display: inline-flex;
+    vertical-align: middle;
+  }
+
+  // ant-input-group-wrapper ant-input-search ant-input-search-with-button
+}
+
+.chart-space {
+  display: flex;
+  flex-flow: column;
+  width: 100%;
+  height: 100%;
+  .ant-card {
+    height: 50%;
+    display: flex;
+    flex-flow: column;
+    &:first-of-type {
+      margin-bottom: 0.75rem;
+    }
+    &:last-of-type {
+      margin-top: 0.75rem;
+    }
+    .ant-card-body {
+      height: 100%;
+      min-height: 24rem;
+    }
+  }
+}
+
+.chart-card {
+  width: 100%;
+  height: 34rem;
+  display: flex;
+  flex-flow: column;
+  .ant-card-body {
+    height: 100%;
+    min-height: 24rem;
+  }
+}

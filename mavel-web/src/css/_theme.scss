@@ -1,0 +1,301 @@
+// Theme
+body {
+  &::-webkit-scrollbar {
+    width: 0.5rem;
+    background-color: transparent;
+  }
+  &::-webkit-scrollbar-track {
+    background-color: transparent;
+  }
+  &::-webkit-scrollbar-thumb {
+    border-radius: 0.5rem;
+  }
+  &.ant-scrolling-effect {
+    width: calc(100% - 0.5rem) !important;
+  }
+}
+
+.q-scrollarea__bar {
+  width: 0.5rem;
+}
+.q-scrollarea__thumb {
+  border-radius: 0.5rem;
+  width: 0.5rem;
+  background-color: #969696;
+  opacity: 1;
+}
+.q-drawer {
+  box-shadow: $big-light-shadow;
+  a.q-item {
+    &.active {
+      color: $primary;
+    }
+  }
+}
+.side-bottom-nav {
+  a {
+    color: #888;
+  }
+}
+
+.h-nav-item {
+  background-color: #fff;
+
+  &::after {
+    border-bottom: 1px solid #e3e3e5;
+  }
+
+  &.q-item--dark {
+    background-color: $dark-body-bg;
+  }
+  &.active {
+    background-color: $primary;
+    color: #fff;
+  }
+}
+
+.cpass-qr-code {
+  display: inline-block;
+  vertical-align: middle;
+  width: 18rem;
+  height: 18rem;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: 50% 50%;
+  background-image: url('/images/cpass_qr.svg');
+}
+
+.table-card {
+  background-color: transparent;
+  border-color: $grey-4;
+}
+
+.table-card-list {
+  .q-item {
+    .title {
+      color: $grey-5;
+    }
+    .value {
+      color: rgba(0, 0, 0, 0.7);
+    }
+  }
+}
+
+body.body--light {
+  &::-webkit-scrollbar-thumb {
+    background-color: #969696;
+  }
+  .q-header {
+    background-color: #fff;
+    color: #333;
+  }
+  .q-footer {
+    color: #333;
+    .section {
+      border-color: rgba(0, 0, 0, 0.1);
+    }
+    .section-copy {
+      color: rgba(0, 0, 0, 0.3);
+    }
+    .f-nav-item {
+      color: rgba(0, 0, 0, 0.7);
+      &:hover {
+        color: #000;
+      }
+    }
+  }
+  .carousel__slide .q-item__label--caption {
+    color: rgba(0, 0, 0, 0.5);
+  }
+  .under-blur-container .carousel__prev,
+  .under-blur-container .carousel__next {
+    border-color: $dark;
+  }
+  .carousel__next,
+  .carousel__prev {
+    color: $dark;
+  }
+}
+
+// dark
+body.body--dark {
+  background-color: $dark-body-bg;
+  &::-webkit-scrollbar-thumb {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: #fff;
+  }
+  a {
+    color: #fff;
+  }
+  .q-header {
+    background-color: transparent;
+    color: #fff;
+  }
+  .q-footer {
+    color: rgba(255, 255, 255, 0.6);
+    .section {
+      border-color: rgba(255, 255, 255, 0.1);
+    }
+    .section-copy {
+      color: rgba(255, 255, 255, 0.3);
+    }
+    .f-nav-item {
+      color: rgba(255, 255, 255, 0.6);
+      &:hover {
+        color: #fff;
+      }
+    }
+  }
+  .ant-modal-content {
+    background-color: $dark-page;
+    color: #fff;
+  }
+  .ant-modal-header {
+    background-color: $dark-page;
+    border-color: rgba(255, 255, 255, 0.1);
+  }
+  .ant-modal-title,
+  .ant-modal-close-x {
+    color: #fff;
+  }
+  .ant-modal-footer {
+    border-color: rgba(255, 255, 255, 0.1);
+  }
+  .game-link {
+    background-color: $dark;
+  }
+  .cpass-qr-code {
+    background-image: url('/images/cpass_qr_w.svg');
+  }
+  .cpass-logo {
+    @include cpass('rgb(255,255,255)');
+  }
+
+  .header-icon-area,
+  .header-icon {
+    background: $default-item-bg;
+  }
+
+  .h-nav-item {
+    &::after {
+      border-bottom: 1px solid $default-item-bg;
+    }
+  }
+
+  .q-header {
+    .container {
+      background-color: $dark-body-bg;
+    }
+  }
+
+  .point-area {
+    background-color: $default-item-bg;
+  }
+
+  .drawer-controller {
+    background-color: $default-item-bg;
+  }
+
+  .profile-info-container {
+    background-color: $default-item-bg;
+  }
+
+  .change-pwd-controller {
+    background: $custom-purple-01;
+  }
+
+  .point-container {
+    background-color: $default-item-bg;
+    border: none;
+  }
+
+  .profile-label {
+    color: $custom-purple-01;
+  }
+
+  .ant-modal-confirm-body {
+    .ant-modal-confirm-title {
+      color: #fff;
+    }
+    .ant-modal-confirm-content {
+      color: #fff;
+    }
+  }
+
+  .bg-search-input {
+    background: #11141b;
+  }
+
+  .custom-dialog-container {
+    .q-item__label--header {
+      color: #8f9197;
+    }
+
+    .q-item__label--caption {
+      color: rgba(255, 255, 255, 0.5);
+    }
+  }
+
+  .item-label {
+    color: #fff;
+  }
+
+  .carousel__slide--active {
+    .q-btn {
+      border: 1px solid #fff;
+    }
+  }
+
+  .carousel__next,
+  .carousel__prev {
+    background: $default-item-bg;
+  }
+
+  .table-card {
+    border-color: $grey-9;
+  }
+
+  .table-card-list {
+    .q-item {
+      .title {
+        color: $grey-7;
+      }
+      .value {
+        color: #fff;
+      }
+    }
+  }
+
+  .header-label {
+    .hot:after {
+      @include ico('hot', 'rgb(32,36,48)');
+    }
+    .casino:after {
+      @include ico('casino', 'rgb(32,36,48)');
+    }
+  }
+}
+
+.q-scrollarea--dark {
+  .q-scrollarea__thumb {
+    background-color: #202635;
+  }
+}
+.q-list--dark {
+  &.side-bottom-nav {
+    a {
+      color: #6a7492;
+    }
+  }
+}
+
+.q-table--dark {
+  background-color: transparent;
+}

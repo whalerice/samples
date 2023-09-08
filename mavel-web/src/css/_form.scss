@@ -1,0 +1,524 @@
+.q-field--standout {
+  &.q-field--highlighted {
+    .q-field__control {
+      background-color: rgba(0, 0, 0, 0.05);
+      box-shadow: none;
+    }
+  }
+  &.q-field--error {
+    .q-field__control {
+      background-color: rgba(0, 0, 0, 0.05);
+      color: $negative;
+    }
+  }
+}
+
+.q-field__native > span {
+  display: flex;
+  align-items: center;
+}
+
+.q-field--dense {
+  &.q-field--float .q-field__label {
+    transform: translateY(-50%) scale(0.75);
+  }
+  .q-field__bottom {
+    padding-top: 0.5rem;
+  }
+}
+
+.input-contact-no {
+  .q-field__prepend {
+    max-width: 16rem;
+    min-width: 16rem;
+    .q-field {
+      width: 100%;
+    }
+  }
+}
+
+.sign-dialog {
+  .q-dialog__inner {
+    padding: 1rem;
+  }
+  .q-card {
+    border-radius: 1.5rem;
+    width: 100%;
+    background-color: transparent;
+
+    .btn-close {
+      position: absolute;
+      top: 0;
+      right: 0;
+      z-index: 1;
+      padding: 1.5rem;
+      color: $grey;
+    }
+    .q-card__section {
+      padding: 0;
+      display: flex;
+      height: 100%;
+      .section {
+        padding: 3rem 2rem;
+        flex: 1;
+        display: flex;
+        flex-flow: column;
+        &-lt {
+          display: none;
+          position: relative;
+        }
+        &-rt {
+          background-color: #fff;
+          position: relative;
+          &:before {
+            content: '';
+            display: block;
+            width: 20rem;
+            height: 20rem;
+            background: url('/icons/waggle-big-opacity.svg') 0 0 no-repeat;
+            background-size: contain;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+          }
+        }
+      }
+    }
+    .sign-bottom {
+      text-align: center;
+      margin-top: 2rem;
+      color: #333;
+    }
+  }
+
+  .sign-btn-group {
+    position: absolute;
+    top: 2rem;
+    right: 0;
+  }
+
+  .btn-sign-tab {
+    display: block;
+    width: 10rem;
+    padding: 2rem 1rem;
+    border-radius: 1rem 0 0 1rem;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #fff;
+    font-weight: 700;
+    font-size: 1.6rem;
+    &.active {
+      color: $primary;
+      background-color: #fff;
+      .block {
+        background: -webkit-linear-gradient(#1070fc, #05cec2);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+    }
+  }
+}
+
+.sign-form {
+  color: #333;
+  .logo-area {
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+
+  .logo-img {
+    height: 4rem;
+    transform: translateX(-0.5rem);
+  }
+  .input-group {
+    margin-bottom: 2rem;
+  }
+  .form-label {
+    display: inline-block;
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: $default-item-bg;
+    margin-bottom: 0.8rem;
+
+    span {
+      &:nth-child(2) {
+        color: $custom-blue-01;
+        padding-left: 0.6rem;
+      }
+    }
+  }
+  .column {
+    margin-bottom: 2rem;
+  }
+
+  .waggle-area {
+    text-align: center;
+    padding-top: 1rem;
+    .waggle-title {
+      display: inline-block;
+      position: relative;
+      font-size: 3.4rem;
+      line-height: 1;
+      font-weight: 700;
+      color: #333;
+      .img-waggle {
+        display: block;
+        position: absolute;
+        top: -1.2rem;
+        left: -2rem;
+        width: 2.5rem;
+      }
+    }
+  }
+}
+
+.sign-stepper {
+  .q-stepper__step-inner {
+    padding: 0;
+  }
+  .q-stepper__dot {
+    width: 1.1rem;
+    height: 1.1rem;
+    min-width: auto;
+
+    .q-icon {
+      display: none;
+    }
+  }
+  .q-stepper__title {
+    font-size: 1.2rem;
+  }
+  .q-stepper__tab--active {
+    .q-stepper__title {
+      background: $casino-default-gradient-bg;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      text-fill-color: transparent;
+    }
+
+    .q-stepper__dot {
+      background: $casino-default-gradient-bg;
+    }
+  }
+
+  .q-field__bottom {
+    padding: 0.4rem 0 0 0;
+  }
+
+  .sign-input-title {
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: $default-item-bg;
+    margin-bottom: 0.8rem;
+
+    span {
+      &:nth-child(2) {
+        color: $custom-blue-01;
+        padding-left: 0.6rem;
+      }
+    }
+  }
+}
+
+.sign-form-change-controller {
+  color: $custom-blue-01;
+  font-weight: 500;
+}
+
+.sign-form-container {
+  // width: 100%;
+  // max-width: 108.5rem;
+
+  .ant-modal-body {
+    padding: 0;
+    border-radius: 2rem;
+    overflow: hidden;
+  }
+
+  .sign-btn-controller {
+    display: none;
+    position: absolute;
+    top: 2rem;
+    left: -10rem;
+  }
+
+  .btn-sign-tab {
+    display: block;
+    width: 10rem;
+    padding: 2rem 1rem;
+    border-radius: 1rem 0 0 1rem;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #fff;
+    font-weight: 700;
+    font-size: 1.6rem;
+    &.active {
+      color: $primary;
+      background-color: #fff;
+      .block {
+        background: -webkit-linear-gradient(#1070fc, #05cec2);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+    }
+  }
+}
+
+.sign-form-left {
+  position: relative;
+  background: url('/images/sign-img.png') 50% 50% no-repeat;
+  background-size: cover;
+  width: 100%;
+  display: none;
+
+  .sign-img {
+    z-index: 1;
+    height: 100%;
+  }
+
+  .img-text {
+    top: 25.9rem;
+    .logo {
+      margin: auto;
+      width: 35rem;
+      height: 5.7rem;
+    }
+  }
+
+  .caption {
+    line-height: 20px;
+    font-size: 1.6rem;
+    color: rgba(255, 255, 255, 0.8);
+    margin-top: 2.2rem;
+  }
+}
+
+.sign-bottom-area {
+  margin-top: auto;
+  text-align: center;
+  padding-top: 2rem;
+}
+
+.sign-controller-container {
+  position: relative;
+  color: $default-item-bg;
+  // max-width: 56.5rem;
+  width: 100%;
+  background-color: #fff;
+  padding: 3rem 1.5rem 3rem 1.5rem;
+  display: flex;
+  flex-flow: column;
+
+  .waggle-area {
+    padding-top: 2rem;
+    .waggle-title {
+      display: inline-block;
+      position: relative;
+      font-size: 3.4rem;
+      line-height: 1;
+      font-weight: 700;
+      .img-waggle {
+        display: block;
+        position: absolute;
+        top: -1.2rem;
+        left: -2rem;
+        width: 2.5rem;
+      }
+    }
+  }
+
+  .sign-up-container {
+    text-align: center;
+  }
+
+  .sign-in-container {
+    .logo {
+      margin: 0 auto 6rem auto;
+    }
+    .logo-area {
+      text-align: center;
+      width: 100%;
+      height: 4rem;
+      margin-bottom: 3rem;
+      .logo-img {
+        width: auto;
+        height: 100%;
+      }
+    }
+  }
+
+  .sign-input-title {
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: $default-item-bg;
+    margin-bottom: 0.8rem;
+
+    span {
+      &:nth-child(2) {
+        color: $custom-blue-01;
+        padding-left: 0.6rem;
+      }
+    }
+  }
+
+  .q-field--dark .q-field__control:before {
+    border: 0.5px solid #8f9197;
+    border-radius: 6px;
+  }
+
+  .q-field--dark:not(.q-field--highlighted) .q-field__label {
+    color: $default-item-bg;
+    opacity: 0.5;
+  }
+
+  .q-field--dark .q-field__native {
+    color: $default-item-bg;
+  }
+
+  .q-stepper {
+    box-shadow: none;
+  }
+
+  .q-stepper--dark.q-stepper--bordered,
+  .q-stepper--dark .q-stepper__header--border {
+    background: #999;
+  }
+
+  .q-stepper__title {
+    font-size: 1.2rem;
+  }
+
+  .q-stepper__tab--active {
+    .q-stepper__title {
+      background: $casino-default-gradient-bg;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      text-fill-color: transparent;
+    }
+
+    .q-stepper__dot {
+      background: $casino-default-gradient-bg;
+    }
+  }
+
+  .q-field__bottom {
+    padding: 0.4rem 0 0 0;
+  }
+
+  .q-stepper__dot {
+    width: 1.1rem;
+    height: 1.1rem;
+    min-width: auto;
+
+    .q-icon {
+      display: none;
+    }
+  }
+
+  .q-stepper__header--border {
+    border: none;
+  }
+
+  .q-stepper__label {
+    margin-top: 0.3rem;
+  }
+
+  .q-stepper--horizontal {
+    > .q-stepper__nav {
+      padding: 0;
+    }
+  }
+
+  .q-stepper__step-inner {
+    color: $default-item-bg;
+    padding: 0;
+  }
+}
+
+@media (min-width: 768px) {
+  .sign-dialog {
+    .q-dialog__inner {
+      > div {
+        max-width: 100rem;
+      }
+    }
+  }
+}
+
+@media (min-width: 992px) {
+  .sign-dialog {
+    .q-dialog__inner {
+      margin-left: 7rem;
+    }
+    .q-card {
+      height: 100%;
+      max-height: 70rem;
+      .q-card__section {
+        .section {
+          &-lt {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            padding: 0;
+            background: url('/images/sign-img.png') 50% 50% no-repeat;
+            background-size: cover;
+            width: 100%;
+            .text {
+              transform: translateY(-10rem);
+              max-width: 70%;
+              .logo {
+                background-position: 50% 50%;
+                height: 5rem;
+              }
+              // text-align: center;
+              // .logo {
+              //   margin: auto;
+              // }
+            }
+            .caption {
+              margin-top: 2rem;
+            }
+          }
+          &-rt {
+            padding: 6rem 4rem;
+          }
+        }
+      }
+      .sign-bottom {
+        margin-top: auto;
+      }
+    }
+  }
+
+  .sign-form-container {
+    max-width: 90rem;
+
+    .sign-btn-controller {
+      display: block;
+    }
+
+    .logo {
+      width: 35rem;
+      height: 5.7rem;
+    }
+    .ant-modal-content {
+      transform: translateX(3.5rem);
+    }
+  }
+  .sign-form-left {
+    display: block;
+    width: 47%;
+    min-height: 70rem;
+  }
+  .sign-controller-container {
+    width: 53%;
+    padding: 5rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .sign-form-container {
+    max-width: 108.5rem;
+  }
+}

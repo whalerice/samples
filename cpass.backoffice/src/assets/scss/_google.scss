@@ -1,0 +1,26 @@
+body {
+  top: initial !important;
+}
+
+#google_translate_element {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  z-index: 0;
+  display: none;
+}
+
+#goog-gt-tt {
+  display: none !important;
+}
+#gtx-trans {
+  display: none !important;
+}
+.goog-text-highlight {
+  background-color: transparent !important;
+  box-shadow: none !important;
+}
+
+.goog-te-banner-frame {
+  display: none;
+}

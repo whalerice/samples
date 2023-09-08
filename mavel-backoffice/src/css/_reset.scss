@@ -1,0 +1,23 @@
+* {
+  font-family: 'Roboto', 'Spoqa Han Sans Neo', 'sans-serif';
+}
+html,
+body {
+  font-size: 10px;
+  line-height: 1.2;
+}
+
+body {
+  font-size: 1.4rem;
+}
+
+:lang(ja) {
+  *:not(.notranslate) {
+    font-family: 'Roboto', 'Noto Sans JP', 'sans-serif';
+  }
+}
+:lang(zh) {
+  *:not(.notranslate) {
+    font-family: 'Roboto', 'Noto Sans TC', 'sans-serif';
+  }
+}

@@ -1,0 +1,101 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+*,
+:after,
+:before {
+	box-sizing: border-box;
+}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+	display: block;
+}
+
+ol,
+ul,
+li {
+	list-style: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+img {
+	max-width: 100%;
+	height: auto;
+	border: 0;
+}
+a {
+	display: inline-block;
+}
+button {
+	font-family: inherit;
+	font-size: inherit;
+	line-height: 1;
+}
+
+html {
+	width: 100%;
+	font-size: 10px;
+	line-height: 1.4;
+	font-family: $base-font;
+	font-weight: 700;
+}
+
+body {
+	color: $base-text-color;
+	font-size: 1.4rem;
+	background-color: $base-background-color;
+	letter-spacing: 0.02rem;
+	overflow-x: hidden;
+	// overflow-x: hidden;
+	* {
+		// transition: 0.3s ease;
+	}
+}
+
+:root {
+	--main-title: 5rem;
+	--main-caption: 1rem;
+	--main-description: 1.2rem;
+	--font-language: 1.8rem;
+	--slider-title: 2.3rem;
+	--slider-sub-title: 3rem;
+	--footer-title: 5rem;
+
+	--font-size-0: 1.1rem;
+	--font-size-1: 1.2rem;
+	--font-size-2: 1.4rem;
+
+	--iphone-perspective: 950px;
+	--iphone-width: 216px;
+	--swivel-duration: 400ms;
+	// --swivel-duration: 2000ms;
+}
+
+@media (min-width: 992px) {
+	:root {
+		--main-title: 10rem;
+		--main-caption: 2rem;
+		--main-description: 2.4rem;
+		--slider-title: 4.6rem;
+		--slider-sub-title: 6rem;
+		--footer-title: 10rem;
+
+		--font-size-1: 2.4rem;
+		--font-size-2: 2.8rem;
+
+		--iphone-perspective: 2000px;
+		--iphone-width: 400px;
+	}
+}

@@ -1,0 +1,306 @@
+@import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css);
+@import url(//fonts.googleapis.com/css2?family=Limelight&display=swap);
+
+$Limelight: 'Limelight', cursive;
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+html, body {
+	background-color: #000;
+	font-family: 'Spoqa Han Sans Neo', 'sans-serif';
+	font-size: 10px; // 1920 * 1080
+	line-height: 1.3;
+	color: #fff;
+}
+
+body {
+	font-size: 1.2rem;
+}
+#app {
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	flex-flow: column;
+
+}
+
+.hide {
+	display: none !important;
+}
+
+.rate-up {
+	color: #ff4500;
+}
+.rate-down {
+	color: #1ab6e6;
+}
+.co-ye {
+	color:#efc900;
+}
+
+.table {
+	width: 100%;
+	height: 100%;
+	border-collapse: collapse;
+	border-spacing:0;
+	th , td {
+		border: 0;
+	}
+}
+.row {
+	width: 100%;
+	padding: 2rem;
+	min-width: 192rem;
+	overflow-x: auto;
+	.title {
+		font-size: 3rem;
+		line-height: 1.8;
+		margin-bottom: 1.4rem;
+	}
+}
+
+.team-table {
+	background-color: #191919;
+	color: #000;
+	border: 1rem solid #000;
+	thead {
+		th{
+			text-align: right;
+			border: 0.5rem solid #000;
+			font-size: 1.4rem;
+			line-height: 2.1rem;
+			&:nth-of-type(2){
+				text-align: left;
+			}
+
+			padding: 0.2rem 2rem;
+			color: #fffdc0;
+		}
+	}
+	tbody {
+		tr{
+			&:nth-of-type(1),&:nth-of-type(2) {
+				background-color: #fff;
+			}
+			&:nth-of-type(3),&:nth-of-type(4) {
+				background-color: #fffdc0;
+			}
+		}
+		td {
+			border-bottom: 0.5rem solid #000;
+			font-size: 1.6rem;
+			line-height: 2.4rem;
+			padding: .8rem 2rem;
+			font-weight: 700;
+			text-align: right;
+			&:nth-of-type(1) {
+				text-align: center;
+				border-right: 0.5rem solid #000;
+				font-size: 3rem;
+				font-family: $Limelight;
+				padding: 0;
+				font-weight: normal;
+			}
+			&:nth-of-type(2) {
+				text-align: left;
+			}
+			
+		}
+	}
+}
+
+.today-table {
+	position: relative;
+	border-radius: 0.5rem 0.5rem 0 0;
+	overflow: hidden;
+	
+	th, td {
+		text-align: right;
+		&:nth-of-type(1),&:nth-of-type(2){
+			text-align: left;
+		}
+	}
+	thead {
+		th {
+			background-color: rgba(255, 255, 255, 0.2);
+			height: 4rem;
+			padding-right: 1rem;
+			padding-left: 1rem;
+		}
+	}
+	tbody {
+		td {
+			padding: 0.7rem 1rem;
+			border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+			small {
+				font-size: 1rem;
+			}
+		}
+	}
+	&:before, &:after {
+		content: '';
+		display: block;
+		width: 0.1rem;
+		height: calc(100% - 4rem);
+		background-color: rgba(255, 255, 255, 0.2);
+		position: absolute;
+		top: 4rem;
+	}
+	&:before{
+		left: 0;
+	}
+	&:after {
+		right: 0;
+	}
+}
+
+
+.team-area {
+	.contents {
+		padding: 2rem 2rem 2rem 30rem;
+		position: relative;
+		background:url(./assets/images/bg_top.png) 0 0 no-repeat,
+		linear-gradient(270deg, #FFE500 50.94%, #E1CF31 88.88%, rgba(214, 196, 36, 0) 99.5%),;
+		background-size: auto 100%;
+		//padding-left: 30rem;
+		display: flex;
+	}
+
+	.box {
+		&:nth-of-type(1){width: 40%;}
+		&:nth-of-type(2){width: 60%;}
+	}
+	.first-ranking {
+		display: flex;
+		color: #000;
+		padding-top: 1.4rem;
+		.num {
+			min-width: 4.4rem;
+			font-family: $Limelight;
+			font-size: 3rem;
+			line-height: 6.1rem;
+			margin-right: 3.5rem;
+			margin-top: -1.5rem;
+			span {
+				font-size: 2rem;
+				line-height: 2.4rem;
+			}
+		}
+		dl {
+			font-weight: 700;
+			dt {
+				opacity: 0.4;
+				font-size: 1.4rem;
+				line-height: 2.1rem;
+			}
+			dd {
+				font-size: 2rem;
+				line-height: 3rem;
+				margin-bottom: 2rem;
+				&:last-child{
+					margin-bottom: 0;
+				}
+			}
+
+		}
+	}
+}
+
+
+
+.today-area {
+	display: flex;
+	flex-flow: column;
+	flex: 1;
+	.contents {
+		display: flex;
+		height: 100%;
+	}
+	
+	.ranking-box {
+		width: 60rem;
+		flex-shrink: 0;
+	}
+	.ranking-list {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		display: flex;
+		height: 100%;
+		li {
+			flex: 1;
+			position: relative;
+			display: flex;
+			align-items: flex-end;
+			padding-left: 4rem;
+			padding-bottom: 4rem;
+			&:nth-child(1) {
+				background-color: #FF1F00;
+			}
+			&:nth-child(2) {
+				background-color: #FF6A56;
+			}
+			&:nth-child(3) {
+				background-color: #FFA98E;
+			}
+		}
+		dl {
+			dt{
+				opacity:0.4;
+				font-size: 1.4rem;
+				line-height: 2.1rem;
+			}
+			dd {
+				font-size: 2rem;
+				line-height: 3rem;
+				font-weight: 700;
+				margin-bottom: 2rem;
+				&:last-child{
+					margin-bottom: 0;
+				}
+			}
+		}
+		.medal {
+			position: absolute;
+			top: -0.8rem;
+			left: 1rem;
+			display: block;
+			width: 9.6rem;
+			height: 9.6rem;
+			background-repeat: no-repeat;
+			background-size: contain;
+			background-position: 0 0;
+			&.medal-1{
+				background-image: url(./assets/images/ico_gold.png);
+			}
+			&.medal-2{
+				background-image: url(./assets/images/ico_silver.png);
+			}
+			&.medal-3{
+				background-image: url(./assets/images/ico_bronze.png);
+			}
+		}
+	}
+	.today-table {
+		width: calc((100vw - 64rem)/2);
+		margin-left: 2rem;
+		flex: 1;
+	}
+}
+
+@media (min-height: 1440px) {
+	html, body {
+		font-size: 14px;
+		line-height: 1.6;
+	}
+}
+
+@media (min-height: 2080px) {
+	html, body {
+		font-size: 20px;
+	}
+}
